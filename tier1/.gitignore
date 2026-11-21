@@ -1,0 +1,4 @@
+*.o
+switch
+host
+switch_tsan
