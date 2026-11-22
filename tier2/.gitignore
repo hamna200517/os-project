@@ -1,0 +1,7 @@
+*.o
+switch
+host
+swctl
+switch_tsan
+switch.log
+mac_dump.txt
