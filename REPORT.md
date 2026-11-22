@@ -11,7 +11,6 @@ which port and sends each frame only where it needs to go.
 
 tier1 - the core switch (items 1 to 5)
 tier2 - tier 1 plus all advanced items (items 6 to 13)
-tier3 - tier 2 plus all bonus items. This is the final, complete version.
 
 Each folder has its own README with all the build and run steps.
 
@@ -34,15 +33,10 @@ Tier 2: all items, 6 to 13
 - one signal thread with sigwait: SIGINT, SIGHUP, SIGUSR1
 - logger thread with a message queue
 
-Tier 3: all bonus items
-- two switches linked by two pipes (twoswitch)
-- supervisor that restarts the switch after a crash, MAC table in shared memory
-- load generator and benchmark: global lock vs striped locks vs read-write lock
-
 ## Build
 I built and tested everything on Linux, in Docker on my Mac.
 
-    cd tier3
+    cd tier2
     make
     make clean
 
