@@ -182,6 +182,7 @@ int main(int argc, char **argv)
             fprintf(stderr, "bad destination %s\n", dst_s);
             continue;
         }
+        
         msg = line + n;
         while (msg[0] == '-' && (msg[1] == 'p' || msg[1] == 'c'))
         {

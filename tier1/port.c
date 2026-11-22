@@ -11,10 +11,14 @@
 static void send_to(int out, struct frame *f)
 {
     if (ports[out].state != port_active)
+    {
         return;
+    }
     frame_hold(f);
     if (queue_push(&ports[out].q, f) < 0)
+    {
         frame_put(f);  
+    }
 }
 
 static void forward(int in, struct frame *f)

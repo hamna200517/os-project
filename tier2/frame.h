@@ -40,7 +40,6 @@ ssize_t write_full(int fd, const void *buf, size_t n);
 
 struct frame *frame_new(const struct headerformat *h, const uint8_t *payload);
 int frame_read(int fd, struct frame **out);
-int frame_send(int fd, struct frame *f);
 void frame_hold(struct frame *f);
 void frame_put(struct frame *f);
 void frame_set_vlan(struct frame *f, uint16_t vlan);
